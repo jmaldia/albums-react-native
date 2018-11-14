@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "runios": "export PATH=\"/usr/local/lib/node_modules/node/bin:$PATH\""
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4"
   },

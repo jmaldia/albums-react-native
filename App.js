@@ -9,9 +9,10 @@
 import React, {Component} from 'react';
 import {Platform, Text, View} from 'react-native';
 
-import { styles } from './src/Styles';
+// import { styles } from './src/Styles';
 
 import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,14 +23,25 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      headerText: 'Album!'
+    };
+  };
+
+
   render() {
     return (
-      <View style={styles.container}>
-        <Header />
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Text style={styles.instructions}>This is pretty awesome!!!</Text>
+      <View>
+        <Header {...this.state} />
+        <AlbumList />
       </View>
     );
   };
 };
+
+// style={styles.container}
+// <Text style={styles.instructions}>To get started, edit App.js</Text>
+// <Text style={styles.instructions}>{instructions}</Text>
+// <Text style={styles.instructions}>This is pretty awesome!!!</Text>
