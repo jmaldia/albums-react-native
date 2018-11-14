@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 
 const Card = (props) => {
@@ -10,7 +10,6 @@ const Card = (props) => {
 };
 
 export default Card;
-
 
 const styles = {
     containerStyle: {

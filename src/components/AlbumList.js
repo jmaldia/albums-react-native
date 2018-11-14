@@ -7,19 +7,11 @@ import AlbumDetail from './AlbumDetail';
 
 // Make a component
 class AlbumList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            albums: []
-        };
+    state = {
+        albums: []
     };
       
     componentWillMount() {
-        // fetch('http://rallycoding.herokuapp.com/api/music_albums').then(data => {
-        //     return data.json()
-        // }).then(albums => {
-        //     this.setState({ albums })
-        // })
         axios.get('https://rallycoding.herokuapp.com/api/music_albums')
             .then(response => this.setState({ albums: response.data }));
     };
@@ -35,7 +27,7 @@ class AlbumList extends Component {
         
         return (
             <View>
-                {this.renderAlbums()}
+                { this.renderAlbums() }
             </View>
         );
     };
@@ -43,3 +35,11 @@ class AlbumList extends Component {
 
 // Make the component available to other parts of the app
 export default AlbumList;
+
+
+
+// fetch('http://rallycoding.herokuapp.com/api/music_albums').then(data => {
+//     return data.json()
+// }).then(albums => {
+//     this.setState({ albums })
+// })
