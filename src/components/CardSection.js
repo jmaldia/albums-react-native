@@ -12,6 +12,10 @@ const CardSection = (props) => {
 export default CardSection;
 
 const styles = {
+    title: {
+        fontSize: 17,
+        textTransform: 'uppercase'
+    },
     containerStyle: {
         borderBottomWidth: 0,
         padding: 5, 
